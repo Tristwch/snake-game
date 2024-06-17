@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Snake Game</title>
+    <style>
+      body {
+        font-family: Arial, sans-serif;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        background-color: lightgray
+      }
+      #gui {
+        margin-bottom: 10px;
+      }
+      .hidden {
+        display: none;
+      }
+
+      canvas
+    </style>
+  </head>
+  <body>
+    <h1>Snake game</h1>
+    <div id="gui">
+      <div>
+        <span>Best Score: <span id="bestScore">0</span></span>
+      </div>
+      <div>
+        <span>Current Score: <span id="currentScore">0</span></span>
+      </div>
+      <div id="menuButtons">
+        <button id="playButton">Play</button>
+        <button id="exitButton">Exit</button>
+      </div>
+      <div id="gameButtons" class="hidden">
+        <button id="menuButton">Menu</button>
+      </div>
+      <div>
+        <label for="gameMode">Game Mode:</label>
+        <div id="gameMode">
+          <label>
+            <input type="radio" name="gameMode" value="classic" checked />
+            Classic
+          </label>
+          <label>
+            <input type="radio" name="gameMode" value="noDie" />
+            No Die
+          </label>
+          <label>
+            <input type="radio" name="gameMode" value="walls" />
+            Walls
+          </label>
+          <label>
+            <input type="radio" name="gameMode" value="portal" />
+            Portal
+          </label>
+          <label>
+            <input type="radio" name="gameMode" value="speed" />
+            Speed
+          </label>
+        </div>
+      </div>
+    </div>
+    <script src="https://pixijs.download/release/pixi.js"></script>
+    <script src="./game.js" type="module"></script>
+  </body>
+</html>
